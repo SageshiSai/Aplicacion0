@@ -1,1 +1,25 @@
-//escribe una variable con el color blanco
+$blanco = #ffffff;
+$negro = #000000;
+$gris = #333333;
+$gris-claro = #666666;
+
+
+.caja
+  background-color: $gris;
+  color: $blanco;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba($negro, 0.5);
+
+  //crea un bucle de colores que sea rgb de 0 a 255
+    @for $i from 1 through 3
+        .caja-#{$i}
+        background-color: rgb($i * 50, $i * 50, $i * 50);
+        color: $blanco;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba($negro, 0.5);
+
+
